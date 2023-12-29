@@ -1,0 +1,7 @@
+duck_dbt:
+  target: dev
+  outputs:
+    dev:
+      type: duckdb
+      path: duckdb
+      threads: 24
