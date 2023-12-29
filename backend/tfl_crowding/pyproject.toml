@@ -1,6 +1,28 @@
-[build-system]
-requires = ["setuptools"]
-build-backend = "setuptools.build_meta"
-
 [tool.dagster]
 module_name = "tfl_crowding"
+
+[tool.poetry]
+name = "tfl_crowding"
+version = "0.1.0"
+description = ""
+authors = ["c-abbott <cllmbbtt@gmail.com>"]
+license = "MIT"
+readme = "README.md"
+packages = [{include = "tfl_crowding"}]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+dagster = "^1.5.13"
+requests = "^2.31.0"
+dagster-webserver = "^1.5.13"
+
+
+[[tool.poetry.source]]
+name = "grpcio"
+url = "https://github.com/dagster-io/build-grpcio/wiki/Wheels"
+default = false
+secondary = false
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
