@@ -1,22 +1,21 @@
 [tool.dagster]
-module_name = "tfl_crowding"
+module_name = "dagster_tfl"
 
 [tool.poetry]
-name = "tfl_crowding"
+name = "dagster_tfl"
 version = "0.1.0"
 description = ""
 authors = ["c-abbott <cllmbbtt@gmail.com>"]
-license = "MIT"
 readme = "README.md"
-packages = [{include = "tfl_crowding"}]
+packages = [{include = "dagster_tfl"}]
 
 [tool.poetry.dependencies]
 python = "^3.10"
 dagster = "^1.5.13"
-requests = "^2.31.0"
 dagster-webserver = "^1.5.13"
+duckdb = "^0.9.2"
 dagster-dbt = "^0.21.13"
-dbt-duckdb = "^1.7.0"
+grpcio = {version = "^1.47.5", source = "grpcio"}
 
 
 [[tool.poetry.source]]
